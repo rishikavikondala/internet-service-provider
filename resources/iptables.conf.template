@@ -1,0 +1,26 @@
+# Fill in the parameters in <> in order to complete the ruleset
+
+# Rules are given on a table-by-table basis, beginning with the *<table> and
+# ending with COMMIT.
+
+# Rules are appended to a chain using the -A <chain> syntax. Parameters vary
+# somewhat by chain and type of effect desired.
+
+# The -j switch instructs the rules engine to jump to another chain or perform
+# the action on the matched packet. The engine will not evaluate any more rules
+# in the given chain.
+
+# The default policy for a chain is given by the lines beginning with
+# :<chain>. The [0:0] resets the packet/byte counters that tell us how many
+# times the default policy has been applied. Note that default policy is
+# evaluated after all rules, so it only applies if there were not any matches.
+
+*nat
+-A POSTROUTING -o <interface> -j MASQUERADE
+COMMIT
+
+*filter
+:FORWARD <action> [0:0]
+-A FORWARD -i <interface> -o <interface> -j ACCEPT
+-A FORWARD -i <interface> -o <interface> -m conntrack --ctstate RELATED,ESTABLISHED -j <action>
+COMMIT
