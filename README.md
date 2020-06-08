@@ -18,7 +18,7 @@ Group Network Allocations:
 - Core Tunnel IP: 10.99.08
 
 ## Diagram
-![Network Diagram](resources/INFO 314 Group 1 Network Diagram.png)
+![Network Diagram](./resources/INFO 314 Group 1 Network Diagram.png)
 
 ## rishik10
 
