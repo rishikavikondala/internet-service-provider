@@ -10,12 +10,8 @@ Objectives:
 Group Network Allocations:
 - Autonomous System Number (ASN) Range: 65010 - 65019
 - IP Allocation: 172.27.8.0/22
-- ISP ASN: 65010
-- ISP Endpoint: 165.227.7.58:51824
-- ISP Tunnel IP: 10.99.0.9
-- Core ASN: 65000
-- Core Endpoint: 167.71.148.138:51824
-- Core Tunnel IP: 10.99.08
+- ISP ASN: 65010 | ISP Endpoint: 165.227.7.58:51824 | ISP Tunnel IP: 10.99.0.9
+- Core ASN: 65000 | Core Endpoint: 167.71.148.138:51824 | Core Tunnel IP: 10.99.08
 
 ## Diagram
 
