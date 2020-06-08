@@ -19,6 +19,8 @@ Group Network Allocations:
 
 ## Diagram
 
+![INFO 314 Group 1 Network Diagram](/Users/rishikavikondala/Projects/314/group-networking-project-group-1/resources/INFO 314 Group 1 Network Diagram.png)
+
 
 ## rishik10
 
