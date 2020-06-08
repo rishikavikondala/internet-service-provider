@@ -1,6 +1,6 @@
 # Internet Service Provider Project
 
-## Project Overview:
+## Project Overview
 Team Members: Rishi Kavikondala, Sean Yang, Gavin Sreesangkom
 
 Objectives:
@@ -17,7 +17,10 @@ Group Network Allocations:
 - Core Endpoint: 167.71.148.138:51824
 - Core Tunnel IP: 10.99.08
 
-**## rishik10**
+## Diagram
+![Network Diagram](/resources/INFO 314 Group 1 Network Diagram.png)
+
+## rishik10
 
 IP Address Range: 172.27.8.0/24
 - 172.27.8.0/25 (public)
