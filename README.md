@@ -19,7 +19,7 @@ Group Network Allocations:
 
 ## Diagram
 
-![INFO 314 Group 1 Network Diagram](/Users/rishikavikondala/Projects/314/group-networking-project-group-1/resources/INFO 314 Group 1 Network Diagram.png)
+![INFO 314 Group 1 Network Diagram](https://github.com/i314-campbell-sp20/group-networking-project-group-1/blob/master/resources/INFO%20314%20Group%201%20Network%20Diagram.png)
 
 
 ## rishik10
