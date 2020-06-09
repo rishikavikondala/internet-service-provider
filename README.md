@@ -51,7 +51,7 @@ IP Address Range: 172.27.10.0/24
 - 172.27.10.0/25 (public)
 - 172.27.10.128/25 (private)
 
-LAN I Configuration
+LAN III Configuration
 - Available address range: 172.27.10.131 - 172.27.10.254
 - Subnet ID: 172.27.10.128
 - Broadcast Address: 172.27.10.255
