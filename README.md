@@ -47,3 +47,28 @@ Free Range Routing Configuration
 
 
 ## gavinpi
+IP Address Range: 172.27.10.0/24
+- 172.27.10.0/25 (public)
+- 172.27.10.128/25 (private)
+
+LAN I Configuration
+- Available address range: 172.27.10.131 - 172.27.10.254
+- Subnet ID: 172.27.10.128
+- Broadcast Address: 172.27.10.255
+- DNS Resolver IP: 172.27.10.129
+- Domain Name: rishik10.pi
+- Authoritative Name Server IP: 172.27.10.120
+- Authoritative Name Server Domain: dns.sirgavos.pi
+- Mail Server IP: 172.27.10.124
+- Mail Server Name: ms.sirgavos.pi
+
+Wireguard Configuration
+- Pi address: 172.27.10.0
+- Peer address: 172.27.10.1
+- Port: 51821
+
+Free Range Routing Configuration
+- ASN: 65011
+- Neighbor ASN: 65012
+- BGP Router ID: 172.27.10.2
+- Neighbor ID: 172.27.10.1
