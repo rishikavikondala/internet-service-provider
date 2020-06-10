@@ -1,0 +1,10 @@
+[Match]
+Name=vlan10
+
+[Network]
+# Enable link local addressing for IPv6 only
+LinkLocalAddressing=ipv6
+# Watch for router advertisements so that we can learn about neighboring routers
+IPv6AcceptRA=yes
+# Required due to a bug in FRR (https://github.com/FRRouting/frr/issues/2205)
+IPv6PrivacyExtensions=no

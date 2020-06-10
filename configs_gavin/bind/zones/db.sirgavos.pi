@@ -1,0 +1,24 @@
+;
+; BIND data file for local loopback interface
+;
+
+sirgavos.pi.	IN	SOA	dns.srigavos.pi. sreesg.uw.edu. (
+			 2019021600		; Serial
+			 3600		; Refresh
+			 1800		; Retry
+			3600000		; Expire
+			 600 )	; Negative Cache TTL
+;
+; Name Server
+sirgavos.pi. 86400	IN	NS	dns.srigavos.pi.
+; Glue Records
+dns.sirgavos.pi. 86400	IN	A	172.27.10.120
+; Subsequent DNS responses will list records in random order
+www.sirgavos.pi IN A 172.27.10.121
+www.sirgavos.pi IN A 172.27.10.122
+www.sirgavos.pi IN A 172.27.10.123
+;
+; MX record
+;
+sirgavos.pi. 10800 IN MX 100 ms.sirgavos.pi
+ms.sirgavos.pi 86400 IN A 172.27.10.124
