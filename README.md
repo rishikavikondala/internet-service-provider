@@ -107,3 +107,11 @@ I have successfully updated and implement Docker-mail to have the mail being set
 After doing some debuggin with Clinton, it is found out that something was wrong with my isc-dhcp-server, where it is actively running but somehow no logs (nothing seems to be running) of the dhcp. After resinstalling isc-dhcp-server, the problem still persists.
 
 ![working web mail](https://github.com/i314-campbell-sp20/group-networking-project-group-1/blob/master/resources/sirgavos.png)
+
+### Sean's Encounter to Error:
+I had configured everything needed for the Docker-mail set up and was able to access the server. When I proceeded to actually testing the mail server, I was not able to send or receive any emails. 
+
+After spending time troubleshooting this error with Professor Campbell, I was able to make some tweaks in several configuration files that were needed (dummy interfaces, routing links, wireguard, dhcp, zones, etc.) Additionally, we visited vtysh and reconfigured several settings within what was was saved in the configured terminal. After making numerous fixes, I was able to reach both Professor Campbell's mail (clinton@gradebook.pi), as well as Rishi's (pi@rishik10.pi) but was not able to receive their replies. 
+
+Ultimately, it was concluded that this error does not have to do with what was coded/inputted within my pi on my part, but rather because of conflict from my home router (Comcast --> ipv6). This is turn may override the configured ipv4 settings set on my pi board. 
+
