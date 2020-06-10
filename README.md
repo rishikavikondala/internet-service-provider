@@ -98,3 +98,10 @@ Free Range Routing Configuration
 - Neighbor ASN: 65012
 - BGP Router ID: 172.27.10.2
 - Neighbor ID: 172.27.10.3
+
+
+## Write Up:
+#### Gavin's encounter to error:
+I have successfully updated and implement Docker-mail to have the mail being set up as shown below. However, when trying to connect back to the mail, it said that the server cannot be reached. This happened at the sametime with my Pi not being able to connect the laptop to the internet. The pi itself can ping and Dig DNS but it cannot connect the device itself to the internet. Because of this, i cannot conenct to the mail server and send the mail.
+
+After doing some debuggin with Clinton, it is found out that something was wrong with my isc-dhcp-server, where it is actively running but somehow no logs (nothing seems to be running) of the dhcp. After resinstalling isc-dhcp-server, the problem still persists.
