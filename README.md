@@ -45,6 +45,32 @@ Free Range Routing Configuration
 
 ## syang248
 
+IP Address Range: 172.27.9/24
+- 172.27.9.0/25 (private)
+- 172.27.9.128/25 (public)
+
+LAN | Configuration
+- Available address range: 172.27.9.131 - 172.27.9.254
+- Subnet ID: 172.27.9.128
+- Broadcast Address: 172.27.9.255
+- DNS Resolver IP: 172.27.9.132
+- Domain Name: yanginfo314.pi
+- Authoritative Name Server IP: 172.27.9.132
+- Authroitative Name Server Domain: ns.yanginfo314.pi
+- Mail Server IP: 172.27.9.151
+- Mail Server Name: mail111.yanginfo314.pi
+
+Wireguard Configuration
+- Pi address 172.27.9.129
+- Peer Address: 172.27.9.130
+- Port: 54045
+
+Free Range Routing Configuration
+- ASN: 65012
+- Neighbor ASN: 65014
+- BGP Router ID: 172.27.9.131
+- Neighbor ID: 172.27.9.130
+
 
 ## gavinpi
 IP Address Range: 172.27.10.0/24
