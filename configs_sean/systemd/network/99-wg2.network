@@ -1,0 +1,6 @@
+[Match]
+Name=wg2
+
+[Address]
+Address=172.27.9.129/32
+Peer=172.27.9.130/32

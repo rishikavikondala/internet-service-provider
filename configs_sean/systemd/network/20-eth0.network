@@ -1,0 +1,17 @@
+[Match]
+# We only want to match the eth0 interface
+Name=eth0
+
+# Provide full address config in abbreviated notation
+[Network]
+# Default Gateway / DHCP Server
+#Address=172.20.16.129/25
+# Checkpoint #4 Address
+#Address=172.20.16.132/25
+# Final Project Router
+Address=172.27.9.1/25
+# Final Project DNS
+Address=172.27.9.2/25
+
+# Enable link local addresses for IPv6 (FE80::)
+LinkLocalAddressing=ipv6

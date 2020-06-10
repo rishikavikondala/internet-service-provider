@@ -1,0 +1,16 @@
+acl goodclients {
+    localhost;
+    172.27.9.0/26;
+};
+
+options {
+	directory "/var/cache/bind";
+	allow-recursion { goodclients; };
+        allow-query { any; };
+
+	dnssec-enable no;
+
+	auth-nxdomain no;    # conform to RFC1035
+	listen-on-v6 { none; };
+	listen-on { 127.0.0.1; 172.27.9.2; 172.27.9.132; };
+};

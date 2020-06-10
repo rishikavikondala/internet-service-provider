@@ -1,0 +1,16 @@
+[NetDev]
+Name=wg2
+Kind=wireguard
+Description=WireGuard Tunnel Endpoint
+
+[WireGuard]
+PrivateKey= 
+
+[WireGuardPeer]
+PublicKey=3Q/OBvIu7xfOuii7731HrCAjCcsVse6q9dXV57u+W3A=
+AllowedIPs=0.0.0.0/0
+Endpoint=[2604:a880:2:d0::1f0:f001]:54045
+
+# Recommended only on routers that do not provide their own listener
+PersistentKeepalive=25
+

@@ -1,0 +1,27 @@
+; SOA Record for yanginfo314.com
+; Primary NS - ns.yanginfo314.com
+; Administrative Email - seanhy@uw.edu
+;
+; yanginfo314.pi.	700 IN SOA ns.yanginfo314.pi. seanhy@uw.edu  2020051700 86400 7200 3600000 172800
+;
+yanginfo314.pi.   700 IN  SOA        ns.yanginfo314.pi. seanhy.uw.edu (
+		     2020051700		; Serial
+			  86400		; Refresh (24 hours)
+			   7200		; Retry (2 hours)
+			3600000		; Expire (1000 hours)
+			 172800		; TTL (2 days)
+)
+; Name Server
+yanginfo314.pi. 86400 IN NS ns.yanginfo314.pi.
+; Glue Records
+ns.yanginfo314.pi. 86400 IN A 172.27.9.132 
+; Subsequent DNS responses will list records in random order
+www.yanginfo314.pi. IN A 172.27.9.151
+;www.yanginfo314.pi. IN A 172.27.9.153
+;www.yanginfo314.pi. IN A 172.27.9.155
+; www.yanginfo.pi. can be used as an alias for www.yanginfo314.pi
+; www.yanginfo.pi. IN CNAME www.yanginfo314.pi.
+; Mail exchanger records
+yanginfo314.pi. 10800 IN MX 100 mail111.yanginfo314.pi.
+mail111.yanginfo314.pi. 86400 IN A 172.27.9.151
+
