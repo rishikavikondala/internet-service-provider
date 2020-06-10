@@ -5,7 +5,7 @@ Description=WireGuard Tunnel Endpoint
 
 [WireGuard]
 ListenPort=51820
-PrivateKey=2KokFedjP0GFixX1FmNR0smPayh0T0PrfjO9oC0SQX4=
+PrivateKey=<removed for uploading to version control>
 
 [WireGuardPeer]
 PublicKey=3Q/OBvIu7xfOuii7731HrCAjCcsVse6q9dXV57u+W3A=
