@@ -1,0 +1,10 @@
+[Match]
+# Applies to eth0, eth1, ...
+Name=eth*
+
+[Network]
+# Configure IPv4 using DHCP
+DHCP=ipv4
+
+# Enable link local addresses for IPv4 (169.254.x.y) and IPv6 (FE80::)
+LinkLocalAddressing=yes

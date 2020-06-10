@@ -1,0 +1,26 @@
+; SOA record for rishik10.com
+; Primary NS - dns.rishik10.com
+; Administrative Email - rishik10.uw.edu
+;
+; rishik10.pi. IN SOA dns.rishik10.pi. rishik10.uw.edu 2020051600 86400 7200 3600000 172800
+;
+rishik10.pi. IN SOA dns.rishik10.pi. rishik10.uw.edu (
+        2020051600      ; SERIAL (today's date YYYYMMDDnn, where nn is an incrementable two-digit number)
+        86400           ; REFRESH (24 hours or 86400 seconds)
+        7200            ; RETRY (2 hours or 7200 seconds)
+        3600000         ; EXPIRE (1000 hours or 3600000 seconds)
+        172800          ; TTL (2 days or 172800 seconds)
+)
+; Name Server
+rishik10.pi.    86400 IN NS dns.rishik10.pi.
+; Glue Records
+dns.rishik10.pi. 86400 IN A 172.27.8.120
+; Subsequent DNS responses will list records in random order
+www.rishik10.pi. IN A 172.27.8.121
+www.rishik10.pi. IN A 172.27.8.122
+www.rishik10.pi. IN A 172.27.8.123
+; www.rishikten.pi can be used as an alias for www.rishik10.pi
+; www.rishikten.pi. IN CNAME www.rishik10.pi.
+; Mail exchanger records
+rishik10.pi.     10800   IN  MX  100 ms.rishik10.pi.
+ms.rishik10.pi.     86400   IN  A   172.27.8.124

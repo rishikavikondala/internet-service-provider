@@ -1,0 +1,15 @@
+[NetDev]
+Name=wg0
+Kind=wireguard
+Description=WireGuard Tunnel Endpoint
+
+[WireGuard]
+ListenPort=51820
+PrivateKey=2KokFedjP0GFixX1FmNR0smPayh0T0PrfjO9oC0SQX4=
+
+[WireGuardPeer]
+PublicKey=3Q/OBvIu7xfOuii7731HrCAjCcsVse6q9dXV57u+W3A=
+AllowedIPs=0.0.0.0/0
+Endpoint=165.227.7.58:51820
+
+PersistentKeepalive=25

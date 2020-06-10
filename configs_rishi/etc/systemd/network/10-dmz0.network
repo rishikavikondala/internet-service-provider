@@ -1,0 +1,10 @@
+[Match]
+Name=dmz0
+
+[Network]
+Address=172.27.8.120/32
+Address=172.27.8.121/32
+Address=172.27.8.122/32
+Address=172.27.8.123/32
+Address=172.27.8.124/32
+# Include an Address statement for each IP required

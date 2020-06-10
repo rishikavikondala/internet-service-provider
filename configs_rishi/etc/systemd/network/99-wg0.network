@@ -1,0 +1,16 @@
+[Match]
+Name=wg0
+
+[Address]
+Address=172.27.8.0/32
+Peer=172.27.8.1/32
+
+[RoutingPolicyRule]
+Priority=1000
+FirewallMark=1
+Table=100
+
+[Route]
+Destination=0.0.0.0/0
+Table=100
+Gateway=172.27.8.0
