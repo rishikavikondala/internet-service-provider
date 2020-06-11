@@ -49,7 +49,7 @@ IP Address Range: 172.27.9/24
 - 172.27.9.0/25 (private)
 - 172.27.9.128/25 (public)
 
-LAN | Configuration
+LAN II Configuration
 - Available address range: 172.27.9.131 - 172.27.9.254
 - Subnet ID: 172.27.9.128
 - Broadcast Address: 172.27.9.255
