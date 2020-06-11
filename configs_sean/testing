@@ -1,0 +1,460 @@
+Script started on Thu Jun 11 12:54:22 2020
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+[?1034hbash-3.2$ pi[K[Kssh pi@syang248.local
+Enter passphrase for key '/Users/seanyang/.ssh/id_ed25519': 
+Linux syang248 5.4.44-v7l+ #1320 SMP Wed Jun 3 16:13:10 BST 2020 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Jun 11 01:31:02 2020 from fe80::18b9:c60c:2c6f:4d6e%eth0
+]0;pi@syang248: ~[01;32mpi@syang248[00m:[01;34m~ $[00m ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet 172.27.9.131/32 brd 172.27.9.131 scope global lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether dc:a6:32:9f:0a:a3 brd ff:ff:ff:ff:ff:ff
+    inet 172.27.9.1/25 brd 172.27.9.127 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet 172.27.9.2/25 brd 172.27.9.127 scope global secondary eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::dea6:32ff:fe9f:aa3/64 scope link 
+       valid_lft forever preferred_lft forever
+3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether dc:a6:32:9f:0a:a5 brd ff:ff:ff:ff:ff:ff
+    inet6 2601:600:9d7f:c920::485e/128 scope global dynamic noprefixroute 
+       valid_lft 600844sec preferred_lft 600844sec
+    inet6 2601:600:9d7f:c920:dea6:32ff:fe9f:aa5/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 298sec preferred_lft 298sec
+    inet6 fe80::dea6:32ff:fe9f:aa5/64 scope link 
+       valid_lft forever preferred_lft forever
+4: wg2: <POINTOPOINT,NOARP,UP,LOWER_UP> mtu 1420 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/none 
+    inet 172.27.9.129 peer 172.27.9.130/32 scope global wg2
+       valid_lft forever preferred_lft forever
+5: dmz0: <BROADCAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/ether 5e:c0:9a:f3:3f:36 brd ff:ff:ff:ff:ff:ff
+    inet 172.27.9.132/32 scope global dmz0
+       valid_lft forever preferred_lft forever
+    inet 172.27.9.151/32 scope global dmz0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::5cc0:9aff:fef3:3f36/64 scope link 
+       valid_lft forever preferred_lft forever
+6: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:32:1b:93:bf brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+7: docker-mail: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:a9:32:96:47 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 brd 172.18.255.255 scope global docker-mail
+       valid_lft forever preferred_lft forever
+    inet6 fe80::42:a9ff:fe32:9647/64 scope link 
+       valid_lft forever preferred_lft forever
+9: veth7e02af9@if8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker-mail state UP group default 
+    link/ether 4e:91:88:45:b4:72 brd ff:ff:ff:ff:ff:ff link-netnsid 1
+    inet6 fe80::4c91:88ff:fe45:b472/64 scope link 
+       valid_lft forever preferred_lft forever
+11: veth5c31962@if10: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker-mail state UP group default 
+    link/ether 5a:31:5d:b0:ad:b4 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::5831:5dff:feb0:adb4/64 scope link 
+       valid_lft forever preferred_lft forever
+13: veth4b5302e@if12: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker-mail state UP group default 
+    link/ether b6:1c:4b:0e:8f:86 brd ff:ff:ff:ff:ff:ff link-netnsid 2
+    inet6 fe80::b41c:4bff:fe0e:8f86/64 scope link 
+       valid_lft forever preferred_lft forever
+]0;pi@syang248: ~[01;32mpi@syang248[00m:[01;34m~ $[00m w sudo wg
+[0m[32m[1minterface[0m: [32mwg2[0m
+  [1mpublic key[0m: 3/g6t5MCWiP2ueHRmKSC4bTC5wYdQZrqxpmk7csxlEY=
+  [1mprivate key[0m: (hidden)
+  [1mlistening port[0m: 38508
+
+[33m[1mpeer[0m: [33m3Q/OBvIu7xfOuii7731HrCAjCcsVse6q9dXV57u+W3A=[0m
+  [1mendpoint[0m: [2604:a880:2:d0::1f0:f001]:54045
+  [1mallowed ips[0m: 0.0.0.0[36m/[0m0
+  [1mlatest handshake[0m: 43 [36mseconds[0m ago
+  [1mtransfer[0m: 54.50 [36mKiB[0m received, 55.20 [36mKiB[0m sent
+  [1mpersistent keepalive[0m: every 25 [36mseconds[0m
+]0;pi@syang248: ~[01;32mpi@syang248[00m:[01;34m~ $[00m ip route
+10.10.10.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+172.18.0.0/16 dev docker-mail proto kernel scope link src 172.18.0.1 
+172.27.0.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.1.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.2.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.4.0/22 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.8.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.9.0/25 dev eth0 proto kernel scope link src 172.27.9.1 
+172.27.9.130 dev wg2 proto kernel scope link src 172.27.9.129 
+172.27.11.1 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.12.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.13.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.15.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.18.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.19.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.20.1 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.21.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.22.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.25.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.27.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.28.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.28.0/22 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.35.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.40.0/22 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.41.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.42.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.43.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.51.1 via 172.27.9.130 dev wg2 proto bgp metric 20 
+172.27.55.0/24 via 172.27.9.130 dev wg2 proto bgp metric 20 
+]0;pi@syang248: ~[01;32mpi@syang248[00m:[01;34m~ $[00m vtysh -c show bgp summary
+% Can't open configuration file /etc/frr/vtysh.conf due to 'Permission denied'.
+% Command incomplete: show
+]0;pi@syang248: ~[01;32mpi@syang248[00m:[01;34m~ $[00m vtysh -c show bgp summary[1@"show bgp summary"
+% Can't open configuration file /etc/frr/vtysh.conf due to 'Permission denied'.
+
+IPv4 Unicast Summary:
+BGP router identifier 172.27.9.131, local AS number 65014 vrf-id 0
+BGP table version 159
+RIB entries 56, using 7168 bytes of memory
+Peers 1, using 17 KiB of memory
+
+Neighbor        V         AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down State/PfxRcd
+172.27.9.130    4      65013     205     204        0    0    0 01:06:32           29
+
+Total number of neighbors 1
+]0;pi@syang248: ~[01;32mpi@syang248[00m:[01;34m~ $[00m vtysh -c "show bgp neighbors"
+% Can't open configuration file /etc/frr/vtysh.conf due to 'Permission denied'.
+BGP neighbor is 172.27.9.130, remote AS 65013, local AS 65014, external link
+Hostname: group1
+  BGP version 4, remote router ID 172.27.11.1, local router ID 172.27.9.131
+  BGP state = Established, up for 01:06:49
+  Last read 00:00:42, Last write 00:00:42
+  Hold time is 180, keepalive interval is 60 seconds
+  Neighbor capabilities:
+    4 Byte AS: advertised and received
+    AddPath:
+      IPv4 Unicast: RX advertised IPv4 Unicast and received
+    Route refresh: advertised and received(old & new)
+    Address Family IPv4 Unicast: advertised and received
+    Hostname Capability: advertised (name: syang248,domain name: n/a) received (name: group1,domain name: n/a)
+    Graceful Restart Capabilty: advertised and received
+      Remote Restart timer is 120 seconds
+      Address families by peer:
+        none
+  Graceful restart information:
+    End-of-RIB send: IPv4 Unicast
+    End-of-RIB received: IPv4 Unicast
+  Message statistics:
+    Inq depth is 0
+    Outq depth is 0
+                         Sent       Rcvd
+    Opens:                  1          1
+    Notifications:          0          0
+    Updates:              136        137
+    Keepalives:            67         67
+    Route Refresh:          0          0
+    Capability:             0          0
+    Total:                204        205
+  Minimum time between advertisement runs is 0 seconds
+
+ For address family: IPv4 Unicast
+  Update group 1, subgroup 1
+  Packet Queue length 0
+  Community attribute sent to this neighbor(all)
+  29 accepted prefixes
+
+  Connections established 1; dropped 0
+  Last reset 01:07:05,   Waiting for NHT
+Local host: 172.27.9.129, Local port: 59868
+Foreign host: 172.27.9.130, Foreign port: 179
+Nexthop: 172.27.9.129
+Nexthop global: ::
+Nexthop local: ::
+BGP connection: non shared network
+BGP Connect Retry Timer in Seconds: 120
+Estimated round trip time: 12639 ms
+Read thread: on  Write thread: on  FD used: 23
+
+
+]0;pi@syang248: ~[01;32mpi@syang248[00m:[01;34m~ $[00m vtysh -c "show bgp neighbors"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"i"p" "r"o"u"t"e"
+% Can't open configuration file /etc/frr/vtysh.conf due to 'Permission denied'.
+Codes: K - kernel route, C - connected, S - static, R - RIP,
+       O - OSPF, I - IS-IS, B - BGP, E - EIGRP, N - NHRP,
+       T - Table, v - VNC, V - VNC-Direct, A - Babel, D - SHARP,
+       F - PBR, f - OpenFabric,
+       > - selected route, * - FIB route, q - queued route, r - rejected route
+
+B>* 10.10.10.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+C>* 172.18.0.0/16 is directly connected, docker-mail, 01:06:47
+B>* 172.27.0.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.1.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.2.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.4.0/22 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.8.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+C * 172.27.9.0/25 is directly connected, eth0, 01:07:09
+C>* 172.27.9.0/25 is directly connected, eth0, 01:07:09
+C>* 172.27.9.130/32 is directly connected, wg2, 01:07:15
+C>* 172.27.9.131/32 is directly connected, lo, 01:07:14
+C>* 172.27.9.132/32 is directly connected, dmz0, 01:07:15
+C>* 172.27.9.151/32 is directly connected, dmz0, 01:07:15
+B>* 172.27.11.1/32 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.12.0/24 [20/0] via 172.27.9.130, wg2, 00:00:51
+B>* 172.27.13.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.15.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.18.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.19.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.20.1/32 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.21.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.22.0/24 [20/0] via 172.27.9.130, wg2, 00:54:35
+B>* 172.27.25.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.27.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.28.0/22 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.28.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.32.0/24 [20/0] via 172.27.9.130, wg2, 00:00:54
+B>* 172.27.33.1/32 [20/0] via 172.27.9.130, wg2, 00:00:54
+B>* 172.27.35.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.40.0/22 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.41.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.42.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.43.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.51.1/32 [20/0] via 172.27.9.130, wg2, 00:00:51
+B>* 172.27.55.0/24 [20/0] via 172.27.9.130, wg2, 01:06:57
+B>* 172.27.56.0/24 [20/0] via 172.27.9.130, wg2, 00:00:51
+]0;pi@syang248: ~[01;32mpi@syang248[00m:[01;34m~ $[00m sudo iptables-save
+# Generated by xtables-save v1.8.2 on Thu Jun 11 12:56:03 2020
+*nat
+:PREROUTING ACCEPT [3156:630840]
+:INPUT ACCEPT [266:28733]
+:POSTROUTING ACCEPT [55:3697]
+:OUTPUT ACCEPT [52:3517]
+:DOCKER - [0:0]
+-A PREROUTING -m addrtype --dst-type LOCAL -j DOCKER
+-A POSTROUTING -s 172.17.0.0/16 ! -o docker0 -j MASQUERADE
+-A POSTROUTING -s 172.18.0.0/16 ! -o docker-mail -j MASQUERADE
+-A POSTROUTING -o wlan0 -j MASQUERADE
+-A POSTROUTING -s 172.18.0.2/32 -d 172.18.0.2/32 -p tcp -m tcp --dport 143 -j MASQUERADE
+-A POSTROUTING -s 172.18.0.3/32 -d 172.18.0.3/32 -p tcp -m tcp --dport 80 -j MASQUERADE
+-A POSTROUTING -s 172.18.0.4/32 -d 172.18.0.4/32 -p tcp -m tcp --dport 25 -j MASQUERADE
+-A OUTPUT ! -d 127.0.0.0/8 -m addrtype --dst-type LOCAL -j DOCKER
+-A DOCKER -i docker0 -j RETURN
+-A DOCKER -i docker-mail -j RETURN
+-A DOCKER ! -i docker-mail -p tcp -m tcp --dport 143 -j DNAT --to-destination 172.18.0.2:143
+-A DOCKER ! -i docker-mail -p tcp -m tcp --dport 80 -j DNAT --to-destination 172.18.0.3:80
+-A DOCKER ! -i docker-mail -p tcp -m tcp --dport 25 -j DNAT --to-destination 172.18.0.4:25
+COMMIT
+# Completed on Thu Jun 11 12:56:03 2020
+# Generated by xtables-save v1.8.2 on Thu Jun 11 12:56:03 2020
+*filter
+:INPUT ACCEPT [1199:176924]
+:FORWARD DROP [9:756]
+:OUTPUT ACCEPT [701:72975]
+:DOCKER - [0:0]
+:DOCKER-ISOLATION-STAGE-1 - [0:0]
+:DOCKER-ISOLATION-STAGE-2 - [0:0]
+:DOCKER-USER - [0:0]
+-A FORWARD -j DOCKER-USER
+-A FORWARD -j DOCKER-ISOLATION-STAGE-1
+-A FORWARD -o docker0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+-A FORWARD -o docker0 -j DOCKER
+-A FORWARD -i docker0 ! -o docker0 -j ACCEPT
+-A FORWARD -i docker0 -o docker0 -j ACCEPT
+-A FORWARD -o docker-mail -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+-A FORWARD -o docker-mail -j DOCKER
+-A FORWARD -i docker-mail ! -o docker-mail -j ACCEPT
+-A FORWARD -i docker-mail -o docker-mail -j ACCEPT
+-A FORWARD -i eth0 -o wlan0 -j ACCEPT
+-A FORWARD -i wlan0 -o eth0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+-A DOCKER -d 172.18.0.2/32 ! -i docker-mail -o docker-mail -p tcp -m tcp --dport 143 -j ACCEPT
+-A DOCKER -d 172.18.0.3/32 ! -i docker-mail -o docker-mail -p tcp -m tcp --dport 80 -j ACCEPT
+-A DOCKER -d 172.18.0.4/32 ! -i docker-mail -o docker-mail -p tcp -m tcp --dport 25 -j ACCEPT
+-A DOCKER-ISOLATION-STAGE-1 -i docker0 ! -o docker0 -j DOCKER-ISOLATION-STAGE-2
+-A DOCKER-ISOLATION-STAGE-1 -i docker-mail ! -o docker-mail -j DOCKER-ISOLATION-STAGE-2
+-A DOCKER-ISOLATION-STAGE-1 -j RETURN
+-A DOCKER-ISOLATION-STAGE-2 -o docker0 -j DROP
+-A DOCKER-ISOLATION-STAGE-2 -o docker-mail -j DROP
+-A DOCKER-ISOLATION-STAGE-2 -j RETURN
+-A DOCKER-USER -j RETURN
+COMMIT
+# Completed on Thu Jun 11 12:56:03 2020
+]0;pi@syang248: ~[01;32mpi@syang248[00m:[01;34m~ $[00m exit
+logout
+Connection to syang248.local closed.
+bash-3.2$ ping 172.27.8.2
+PING 172.27.8.2 (172.27.8.2): 56 data bytes
+Request timeout for icmp_seq 0
+Request timeout for icmp_seq 1
+Request timeout for icmp_seq 2
+^C
+--- 172.27.8.2 ping statistics ---
+4 packets transmitted, 0 packets received, 100.0% packet loss
+bash-3.2$ ping 172.27.8.0
+PING 172.27.8.0 (172.27.8.0): 56 data bytes
+Request timeout for icmp_seq 0
+Request timeout for icmp_seq 1
+Request timeout for icmp_seq 2
+^C
+--- 172.27.8.0 ping statistics ---
+4 packets transmitted, 0 packets received, 100.0% packet loss
+bash-3.2$ ping 172.27.8.120[K[K30
+PING 172.27.8.130 (172.27.8.130): 56 data bytes
+Request timeout for icmp_seq 0
+Request timeout for icmp_seq 1
+Request timeout for icmp_seq 2
+^C
+--- 172.27.8.130 ping statistics ---
+4 packets transmitted, 0 packets received, 100.0% packet loss
+bash-3.2$ traceroute
+Version 1.4a12+Darwin
+Usage: traceroute [-adDeFInrSvx] [-A as_server] [-f first_ttl] [-g gateway] [-i iface]
+	[-M first_ttl] [-m max_ttl] [-p port] [-P proto] [-q nqueries] [-s src_addr]
+	[-t tos] [-w waittime] [-z pausemsecs] host [packetlen]
+bash-3.2$ ping 10.10.10.10
+PING 10.10.10.10 (10.10.10.10): 56 data bytes
+Request timeout for icmp_seq 0
+Request timeout for icmp_seq 1
+Request timeout for icmp_seq 2
+^C
+--- 10.10.10.10 ping statistics ---
+4 packets transmitted, 0 packets received, 100.0% packet loss
+bash-3.2$ dig yanginfo314.pi
+
+; <<>> DiG 9.10.6 <<>> yanginfo314.pi
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 18574
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;yanginfo314.pi.			IN	A
+
+;; AUTHORITY SECTION:
+yanginfo314.pi.		700	IN	SOA	ns.yanginfo314.pi. seanhy.uw.edu.yanginfo314.pi. 2020051700 86400 7200 3600000 172800
+
+;; Query time: 1 msec
+;; SERVER: 172.27.9.2#53(172.27.9.2)
+;; WHEN: Thu Jun 11 12:59:11 PDT 2020
+;; MSG SIZE  rcvd: 96
+
+bash-3.2$ dig yanginfo314.pi[C[1P.pi[1P.pi[1P.pi[1P.pi[1P.pi[1P.pi[1P.pi[1P.pi[1P.pi[1P.pi[1P.pig.pir.pia.pid.pie.pib.pio.pio.pik.pi
+
+; <<>> DiG 9.10.6 <<>> gradebook.pi
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 973
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;gradebook.pi.			IN	A
+
+;; AUTHORITY SECTION:
+gradebook.pi.		10800	IN	SOA	ns1.gradebook.pi. cjcampb.uw.edu. 2020060501 604800 86400 2419200 604800
+
+;; Query time: 889 msec
+;; SERVER: 172.27.9.2#53(172.27.9.2)
+;; WHEN: Thu Jun 11 12:59:23 PDT 2020
+;; MSG SIZE  rcvd: 95
+
+bash-3.2$ dig rishik1-[K0.pi
+
+; <<>> DiG 9.10.6 <<>> rishik10.pi
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 37312
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;rishik10.pi.			IN	A
+
+;; AUTHORITY SECTION:
+rishik10.pi.		10800	IN	SOA	dns.rishik10.pi. rishik10.uw.edu.rishik10.pi. 2020051600 86400 7200 3600000 172800
+
+;; Query time: 129 msec
+;; SERVER: 172.27.9.2#53(172.27.9.2)
+;; WHEN: Thu Jun 11 12:59:35 PDT 2020
+;; MSG SIZE  rcvd: 96
+
+bash-3.2$ dig mx gradebook.pi
+
+; <<>> DiG 9.10.6 <<>> mx gradebook.pi
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 58997
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 3
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;gradebook.pi.			IN	MX
+
+;; ANSWER SECTION:
+gradebook.pi.		1800	IN	MX	100 mx.gradebook.pi.
+
+;; AUTHORITY SECTION:
+gradebook.pi.		300	IN	NS	ns1.gradebook.pi.
+
+;; ADDITIONAL SECTION:
+mx.gradebook.pi.	1800	IN	A	172.27.2.129
+ns1.gradebook.pi.	1800	IN	A	172.27.2.153
+
+;; Query time: 184 msec
+;; SERVER: 172.27.9.2#53(172.27.9.2)
+;; WHEN: Thu Jun 11 12:59:57 PDT 2020
+;; MSG SIZE  rcvd: 110
+
+bash-3.2$ ping gradebook.pi
+ping: cannot resolve gradebook.pi: Unknown host
+bash-3.2$ ping @gradebook.pi[K[K[K[K[K[K[K[K[K[K[K[K[K172.27.2.129
+PING 172.27.2.129 (172.27.2.129): 56 data bytes
+Request timeout for icmp_seq 0
+Request timeout for icmp_seq 1
+Request timeout for icmp_seq 2
+^C
+--- 172.27.2.129 ping statistics ---
+4 packets transmitted, 0 packets received, 100.0% packet loss
+bash-3.2$ ping @172.27.2.129 gradebook.pi
+usage: ping [-AaDdfnoQqRrv] [-c count] [-G sweepmaxsize]
+            [-g sweepminsize] [-h sweepincrsize] [-i wait]
+            [-l preload] [-M mask | time] [-m ttl] [-p pattern]
+            [-S src_addr] [-s packetsize] [-t timeout][-W waittime]
+            [-z tos] host
+       ping [-AaDdfLnoQqRrv] [-c count] [-I iface] [-i wait]
+            [-l preload] [-M mask | time] [-m ttl] [-p pattern] [-S src_addr]
+            [-s packetsize] [-T ttl] [-t timeout] [-W waittime]
+            [-z tos] mcast-group
+Apple specific options (to be specified before mcast-group or host like all options)
+            -b boundif           # bind the socket to the interface
+            -k traffic_class     # set traffic class socket option
+            -K net_service_type  # set traffic class socket options
+            -apple-connect       # call connect(2) in the socket
+            -apple-time          # display current time
+bash-3.2$ ping @172.27.2.129 gradebook.pi[K[K[K[K[K[K[K[K[K[K[K[K
+ping: cannot resolve @172.27.2.129: Unknown host
+bash-3.2$ traces[Kroute
+Version 1.4a12+Darwin
+Usage: traceroute [-adDeFInrSvx] [-A as_server] [-f first_ttl] [-g gateway] [-i iface]
+	[-M first_ttl] [-m max_ttl] [-p port] [-P proto] [-q nqueries] [-s src_addr]
+	[-t tos] [-w waittime] [-z pausemsecs] host [packetlen]
+bash-3.2$ traceroute mail111.yanginfo314.pi
+traceroute to mail111.yanginfo314.pi (172.27.9.151), 64 hops max, 52 byte packets
+ 1  * * *
+ 2  * *^C
+bash-3.2$ exit
+exit
+
+Script done on Thu Jun 11 13:01:46 2020
