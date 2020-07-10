@@ -96,3 +96,14 @@ Free Range Routing Configuration
 - Neighbor ASN: 65012
 - BGP Router ID: 172.27.10.2
 - Neighbor ID: 172.27.10.3
+
+## Further configuration details
+Pi:
+- networkd + systemd -> WiFi setup and DHCP configuration
+- iptables -> NAT configuration
+- bind9 -> caching DNS server and authoritative name server setup 
+- Wireguard -> VPN setup
+- Free Range Routing -> enabling of BGP from Pi to droplet
+Droplet:
+- Wireguard -> VPN setup
+- Free Range Routing -> enabling of BGP between Pis and class core network
